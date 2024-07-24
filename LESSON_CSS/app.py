@@ -15,6 +15,8 @@ def table():
         {"date": "10.01.2010", "temperature": 30, "city": "SPB"},
         {"date": "10.01.2010", "temperature": 30, "city": "Rostov"},
     ]
+
+    images = ["storm.png" if prescreiption > 0 else "sun.png" if prescreiption > 1 else "asdsa" for prescreiption in response]
     return render_template('table.html', data=data, image_name="cloud.png")
 
 
